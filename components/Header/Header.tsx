@@ -1,6 +1,6 @@
 import Link from 'next/link';
 import React from 'react';
-import { Container, Menu } from 'semantic-ui-react';
+import { Button, Container, Menu } from 'semantic-ui-react';
 import styles from 'styles/Header.module.css';
 
 const Header = () => {
@@ -20,6 +20,13 @@ const Header = () => {
                 </Menu.Item>
                 <Menu.Item className={styles.menuItem}>
                     <Link href='/profile'>Profile</Link>
+                </Menu.Item>
+                <Menu.Item className={styles.menuItem}>
+                    <Link href='/login'>
+                        <Button className={styles.loginButton}>
+                            Login with Discord
+                        </Button>
+                    </Link>
                 </Menu.Item>
             </Menu>
         </Container>

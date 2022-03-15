@@ -5,3 +5,8 @@
 .menuItem {
     color: #fff !important;
 }
+
+.loginButton {
+    background-color: #5865f2 !important;
+    color: #fff !important;
+}
