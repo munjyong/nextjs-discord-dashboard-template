@@ -22,7 +22,10 @@ const Header = () => {
                     <Link href='/profile'>Profile</Link>
                 </Menu.Item>
                 <Menu.Item className={styles.menuItem}>
-                    <Link href='/login'>
+                    <Link
+                        href='https://discord.com/api/oauth2/authorize?client_id=953421404357939254&redirect_uri=http%3A%2F%2Flocalhost%3A3000%2F&response_type=code&scope=identify'
+                        passHref
+                    >
                         <Button className={styles.loginButton}>
                             Login with Discord
                         </Button>
