@@ -1,4 +1,4 @@
-export const colors = {
+const colors = {
     white: '#FFFFFF',
     lightGrey: '#99AAB5',
     grey: '#2C2F33',
@@ -6,3 +6,5 @@ export const colors = {
     purple: '#5865F2',
     darkPurple: '#404EED',
 };
+
+export default colors;
