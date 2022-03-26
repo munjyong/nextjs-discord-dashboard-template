@@ -1,5 +1,22 @@
-import React from 'react';
+import React, { useEffect } from 'react';
+import { useSession } from 'next-auth/react';
+import Head from 'next/head';
 
-const profile = () => <div>Profile page</div>;
+const Profile = () => {
+    const { data: session } = useSession();
 
-export default profile;
+    if (!session) {
+        return <div>Please sign in</div>;
+    }
+
+    return (
+        <div>
+            <Head>
+                <title>NextCord - Your profile</title>
+            </Head>
+            Profile page
+        </div>
+    );
+};
+
+export default Profile;

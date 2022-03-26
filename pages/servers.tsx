@@ -1,5 +1,22 @@
 import React from 'react';
+import Head from 'next/head';
+import { useSession } from 'next-auth/react';
 
-const servers = () => <div>Servers page</div>;
+const Servers = () => {
+    const { data: session } = useSession();
 
-export default servers;
+    if (!session) {
+        return <div>Please sign in</div>;
+    }
+
+    return (
+        <div>
+            <Head>
+                <title>NextCord - Your servers</title>
+            </Head>
+            Servers page
+        </div>
+    );
+};
+
+export default Servers;
