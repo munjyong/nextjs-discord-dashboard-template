@@ -4,9 +4,7 @@ import styles from 'styles/Home.module.css';
 const Home = () => (
     <div className={styles.container}>
         <Head>
-            <title>NextCord</title>
-            <meta name='description' content='Made with NextJS' />
-            <link rel='icon' href='/discord.svg' />
+            <title>NextCord - Home</title>
         </Head>
 
         <main className={styles.main}>
