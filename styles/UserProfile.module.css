@@ -1,0 +1,17 @@
+.main {
+    margin-top: 5rem;
+    min-height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.card {
+    background-color: transparent;
+}
+
+.avatar {
+    object-fit: contain;
+    border-radius: 10px;
+}
