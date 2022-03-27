@@ -1,4 +1,3 @@
-import { getToken } from 'next-auth/jwt';
 import { signIn, signOut, useSession } from 'next-auth/react';
 import Image from 'next/image';
 import Link from 'next/link';
@@ -20,9 +19,6 @@ const Header = () => {
                         <Link href='/'>Home</Link>
                     </Menu.Item>
                     <Menu.Item className={styles.menuItem}>
-                        <Link href='/servers'>Servers</Link>
-                    </Menu.Item>
-                    <Menu.Item className={styles.menuItem}>
                         <Link href='/profile'>Profile</Link>
                     </Menu.Item>
                 </div>
@@ -42,34 +38,29 @@ const Header = () => {
                                         {session.user?.name}
                                     </span>
                                 </Menu.Item>
-                                <Link href='/api/auth/signin'>
-                                    <Button
-                                        className={styles.loginButton}
-                                        onClick={(e) => {
-                                            e.preventDefault();
-                                            signOut();
-                                        }}
-                                    >
-                                        Sign out
-                                    </Button>
-                                </Link>
-                            </>
-                        )}
-                        {!session && (
-                            <Link href='/api/auth/signin'>
                                 <Button
                                     className={styles.loginButton}
                                     onClick={(e) => {
                                         e.preventDefault();
-                                        signIn('discord', {
-                                            callbackUrl:
-                                                'http://localhost:3000/',
-                                        });
+                                        signOut();
                                     }}
                                 >
-                                    Login with Discord
+                                    Sign out
                                 </Button>
-                            </Link>
+                            </>
+                        )}
+                        {!session && (
+                            <Button
+                                className={styles.loginButton}
+                                onClick={(e) => {
+                                    e.preventDefault();
+                                    signIn('discord', {
+                                        callbackUrl: 'http://localhost:3000/',
+                                    });
+                                }}
+                            >
+                                Login with Discord
+                            </Button>
                         )}
                     </Menu.Item>
                 </div>
