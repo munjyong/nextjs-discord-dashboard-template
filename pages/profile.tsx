@@ -10,7 +10,13 @@ const Profile = () => {
     const { data, error } = useSWR('/api/profile', fetcher);
 
     if (!session) {
-        return <div>Please sign in</div>;
+        return (
+            <div>
+                <h1 style={{ textAlign: 'center', marginTop: '15px' }}>
+                    Protected route
+                </h1>
+            </div>
+        );
     }
 
     return (
