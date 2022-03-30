@@ -18,7 +18,9 @@ const Profile = () => {
             <Head>
                 <title>NextCord - Your profile</title>
             </Head>
-            <UserProfile />
+            {session.user?.image && (
+                <UserProfile avatar={session.user?.image} userData={data} />
+            )}
         </div>
     );
 };
