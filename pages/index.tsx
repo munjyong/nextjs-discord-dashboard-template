@@ -14,7 +14,7 @@ const Home = () => (
             </h1>
 
             <p className={styles.description}>
-                A simple Discord dashboard and server manager.
+                A simple Discord dashboard.
                 <p className={styles.description}>Built with NextJS.</p>
             </p>
         </main>
