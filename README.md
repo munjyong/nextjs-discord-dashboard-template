@@ -1,18 +1,18 @@
-# A simple Discord dashboard to manage servers. Built with NextJS & Discord.js.
+# NextCord
 
-## Features:
+## About
 
-### NextJS:
+A simple template for a Discord dashboard displaying user data fetched from Discord API.
 
--   Server-side rendering & static site generation (Hybrid)
--   Dynamic routing
+Built with NextJS with a purpose to learn and implement the main features that it provides.
+
+## Features implemented:
+
+-   SSR & CSR
+-   OAuth2 authentication
+-   Protected routes
+-   Dynamic & catchall routing
 -   API routes
--   Layouts
+-   Layout components
 -   Image optimization
 -   CSS modules
-
-### Discord.js:
-
--   Authentication with OAuth2
--   Fetch all guilds
--   Guild member management (kick, timeout, ban)
