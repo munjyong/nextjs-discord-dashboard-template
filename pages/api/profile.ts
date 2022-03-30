@@ -17,7 +17,6 @@ export default async (req: NextApiRequest, res: NextApiResponse) => {
             );
 
             const data = await response.json();
-            console.log('🚀 ~ data', data);
 
             res.statusCode = 200;
             res.send(data);
