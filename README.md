@@ -1,5 +1,7 @@
 # NextCord
 
+### Link: https://nextjs-discord-dashboard-template.vercel.app/
+
 ## About
 
 A simple template for a Discord dashboard displaying user data fetched from Discord API.
