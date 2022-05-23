@@ -7,14 +7,11 @@ export default async (req: NextApiRequest, res: NextApiResponse) => {
 
     try {
         if (session) {
-            const response = await await fetch(
-                'https://discord.com/api/users/@me',
-                {
-                    headers: {
-                        authorization: `Bearer ${session.accessToken}`,
-                    },
-                }
-            );
+            const response = await fetch('https://discord.com/api/users/@me', {
+                headers: {
+                    authorization: `Bearer ${session.accessToken}`,
+                },
+            });
 
             const data = await response.json();
 
